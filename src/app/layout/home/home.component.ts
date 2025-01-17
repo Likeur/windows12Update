@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { TaskbarComponent } from '../../components/taskbar/taskbar.component';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [TaskbarComponent],
   templateUrl: './home.component.html',
   styles: ``
 })
