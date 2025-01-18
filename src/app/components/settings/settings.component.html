@@ -37,7 +37,7 @@
                 </div>
 
                 <!-- Links -->
-                <div class="w-full overflow-y-scroll h-[36vh]">
+                <div class="w-full overflow-y-scroll h-[35vh]">
                     <ul class="w-full flex flex-col gap-1">
                         @for (link of linkList; track $index) {
                             <li class="w-full"><a [routerLink]="link.linkroute" routerLinkActive="bg-white/10" [class]="linkstyle()"> {{link.name}} </a></li>
@@ -49,7 +49,7 @@
             </div>
 
             <!-- Home part -->
-            <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-4 w-full">
                 <h3 class="text-2xl font-bold">Home</h3>
 
                 <!-- Desktop name -->
@@ -61,6 +61,32 @@
                         <p class="text-xl font-bold uppercase">Desktop of Likeur</p>
                         <p class="text-white/80">Lenovo 82TT V3 GEN</p>
                         <button class="text-blue-500">Rename</button>
+                    </div>
+                </div>
+
+                <!-- Recommended settings -->
+                <div class="flex flex-col gap-1 w-full h-[34vh] overflow-y-scroll">
+                    <div class="bg-white/10 p-6 rounded-t-md w-full">
+                        <h4 class="text-2xl font-semibold">Recommended settings</h4>
+                        <p class="text-white/80">Recent and commonly used settings</p>
+                    </div>
+                    <div class="bg-white/10 hover:bg-white/15 duration-200 p-4 w-full flex items-center justify-between">
+                        <div>
+                            <h4 class="">Storage</h4>
+                        </div>
+                        <p class="text-white/80">F</p>
+                    </div>
+                    <div class="bg-white/10 hover:bg-white/15 duration-200 p-4 w-full flex items-center justify-between">
+                        <div>
+                            <h4 class="">Default Apps</h4>
+                        </div>
+                        <p class="text-white/80">F</p>
+                    </div>
+                    <div class="bg-white/10 hover:bg-white/15 duration-200 p-4 rounded-b-md w-full flex items-center justify-between">
+                        <div>
+                            <h4 class="">Wifi</h4>
+                        </div>
+                        <p class="text-white/80">F</p>
                     </div>
                 </div>
             </div>

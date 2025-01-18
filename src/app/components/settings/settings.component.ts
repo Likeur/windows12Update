@@ -14,11 +14,11 @@ export class SettingsComponent {
   public linkList : ILink[] =  [
     {
       name: 'Home',
-      linkroute: 'home'
+      linkroute: 'parahome'
     },
     {
       name: 'System',
-      linkroute: 'home'
+      linkroute: 'parasystem'
     },
     {
       name: 'Bluetooth & devices',
