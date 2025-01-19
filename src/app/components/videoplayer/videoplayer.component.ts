@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-videoplayer',
@@ -8,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class VideoplayerComponent {
 
+  videoIsplayed = false
+
+  @ViewChild('videoPlayer') videoPlayer!: ElementRef<HTMLVideoElement>;
+
+  public playVideo(){
+    this.videoIsplayed = !this.videoIsplayed
+    if(this.videoIsplayed){
+      this.videoPlayer.nativeElement.play();
+    }else{
+      this.videoPlayer.nativeElement.pause();
+    }
+  }
 }
