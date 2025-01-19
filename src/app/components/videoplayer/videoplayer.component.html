@@ -83,11 +83,21 @@
       }
     </button>
 
+    <!-- video list -->
+     <div class="absolute bg-white/40 scale-0 origin-bottom overflow-hidden p-4 backdrop-blur-xl right-5 bottom-5 h-40 w-64 z-50 rounded-xl shadow-md">
+        <div class="flex flex-col gap-2">
+          @for (video of videosAvailable; track $index) {
+            <button (click)="changeVideo(video.linktovideo)" class="p-2 w-full rounded-md active:scale-90 hover:bg-white/10 text-left duration-300" > {{video.name}} </button>
+          }
+        </div>
+     </div>
+
     <!-- Control bar -->
     <div
       class="absolute left-16 backdrop-blur-3xl group-hover:-translate-y-3 duration-300 shadow-xl shadow-white/5 border border-white/10 -bottom-7 z-40 bg-white/30 h-12 w-[50vw] rounded-full flex items-center gap-3 px-4"
     >
-      <button
+      <div>
+        <button
         (click)="playVideo()"
         class="active:scale-75 duration-200 hover:bg-white/10 p-2 rounded-md"
       >
@@ -124,6 +134,15 @@
         </span>
         }
       </button>
+      </div>
+
+      <div>
+        <button>
+          <span></span>
+        </button>
+      </div>
+
+
     </div>
   </div>
 </section>

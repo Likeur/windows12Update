@@ -32,5 +32,10 @@ export class VideoplayerComponent {
 
   public changeVideo(videoUrl: string) {
     this.currentVideo = videoUrl;
+    if (this.videoPlayer) {
+      this.videoPlayer.nativeElement.pause(); // Pause la vidéo
+      this.videoPlayer.nativeElement.load();
+      this.videoPlayer.nativeElement.play(); // Joue la vidéo
+    }
   }
 }
