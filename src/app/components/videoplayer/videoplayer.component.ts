@@ -1,9 +1,10 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { IVideo } from '../../interfaces/vid.interface';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-videoplayer',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './videoplayer.component.html',
   styles: ``
 })
@@ -16,6 +17,7 @@ export class VideoplayerComponent {
   ]
 
   public videoIsplayed = false
+  public videoIsMuted = false
 
   @ViewChild('videoPlayer') videoPlayer!: ElementRef<HTMLVideoElement>;
 
@@ -28,14 +30,26 @@ export class VideoplayerComponent {
     }
   }
 
-  public currentVideo: string = this.videosAvailable[0].linktovideo; // Vidéo par défaut
+  public muteVideo(){
+    this.videoIsMuted = !this.videoIsMuted
+    if(this.videoPlayer){
+      this.videoPlayer.nativeElement.muted = this.videoIsMuted;
+    }
+  }
+
+  public currentVideo: string = this.videosAvailable[2].linktovideo; // Vidéo par défaut
 
   public changeVideo(videoUrl: string) {
     this.currentVideo = videoUrl;
     if (this.videoPlayer) {
       this.videoPlayer.nativeElement.pause(); // Pause la vidéo
-      this.videoPlayer.nativeElement.load();
-      this.videoPlayer.nativeElement.play(); // Joue la vidéo
+      this.videoPlayer.nativeElement.load(); // Joue la vidéo
     }
+  }
+
+  public openVideoList = false
+
+  public toggleVideoList(){
+    this.openVideoList = !this.openVideoList
   }
 }
