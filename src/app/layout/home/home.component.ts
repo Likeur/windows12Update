@@ -8,7 +8,6 @@ import { VideoplayerComponent } from '../../components/videoplayer/videoplayer.c
   selector: 'app-home',
   imports: [TaskbarComponent, SettingsComponent, VideoplayerComponent,CommonModule],
   templateUrl: './home.component.html',
-  styles: ``
 })
 export default class HomeComponent {
 

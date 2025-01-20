@@ -8,7 +8,6 @@ import { RouterOutlet } from '@angular/router';
   styles: [],
 })
 export class AppComponent {
-  title = 'win12';
 
   public imgLink = signal('/img/win12.jpg')
 }

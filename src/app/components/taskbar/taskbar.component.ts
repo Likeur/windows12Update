@@ -4,7 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-taskbar',
   imports: [],
   templateUrl: './taskbar.component.html',
-  styles: ``
 })
 export class TaskbarComponent {
 

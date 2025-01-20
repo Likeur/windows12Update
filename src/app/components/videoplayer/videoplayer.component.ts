@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import { IVideo } from '../../interfaces/vid.interface';
 import { CommonModule } from '@angular/common';
 
@@ -6,7 +6,6 @@ import { CommonModule } from '@angular/common';
   selector: 'app-videoplayer',
   imports: [CommonModule],
   templateUrl: './videoplayer.component.html',
-  styles: ``
 })
 export class VideoplayerComponent {
 

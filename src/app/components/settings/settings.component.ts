@@ -6,7 +6,6 @@ import { RouterModule } from '@angular/router';
   selector: 'app-settings',
   imports: [RouterModule],
   templateUrl: './settings.component.html',
-  styles: ``
 })
 export class SettingsComponent {
   public linkstyle = signal('p-2 flex rounded-md items-center gap-2 hover:bg-white/10 duration-200 w-full')
